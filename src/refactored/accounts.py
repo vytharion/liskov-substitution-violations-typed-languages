@@ -15,6 +15,8 @@ class Account:
     # the same class. There is no inheritance lever to pull, so the
     # invariant the callers depend on — balance >= -overdraft_limit —
     # is the same one this class enforces, with no override to weaken it.
+    __final__ = True
+
     def __init__(self, opening_balance: float, overdraft_limit: float = 0.0) -> None:
         if opening_balance < -overdraft_limit:
             raise ValueError(

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, replace
-from typing import final
+from typing import Union, final
 
 
 @final
@@ -31,4 +31,4 @@ class PublishedDocument:
         return True
 
 
-Document = DraftDocument | PublishedDocument
+Document = Union[DraftDocument, PublishedDocument]

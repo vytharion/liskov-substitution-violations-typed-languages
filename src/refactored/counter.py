@@ -11,6 +11,8 @@ class Counter:
     # weakening attempt is a type error before runtime even starts. The
     # invariant — value monotonically non-decreasing — is now structurally
     # guaranteed because no override can change the only mutator.
+    __final__ = True
+
     def __init__(self, start: int = 0) -> None:
         if start < 0:
             raise ValueError(f"start must be >= 0, got {start}")

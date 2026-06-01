@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import final
+from typing import Union, final
 
 
 @final
@@ -29,7 +29,7 @@ class ConsumedToken:
         return False
 
 
-Token = ActiveToken | ConsumedToken
+Token = Union[ActiveToken, ConsumedToken]
 
 
 def audit_consumed(token: Token) -> bool:
