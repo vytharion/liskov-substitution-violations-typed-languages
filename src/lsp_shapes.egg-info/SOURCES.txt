@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/lsp_shapes.egg-info/PKG-INFO
+src/lsp_shapes.egg-info/SOURCES.txt
+src/lsp_shapes.egg-info/dependency_links.txt
+src/lsp_shapes.egg-info/top_level.txt
+src/shapes/__init__.py
+src/shapes/bounded.py
+src/shapes/clamped.py
+src/shapes/rounding.py
+src/shapes/shape.py
+tests/test_bounded.py
+tests/test_positive.py
+tests/test_rounding.py
+tests/test_shapes.py
