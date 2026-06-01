@@ -34,7 +34,6 @@ class RefreshableToken(OneTimeToken):
 
 def audit_consumed(token: OneTimeToken) -> bool:
     # Encodes the parent history constraint: a token observed inactive
-    # once is permanently inactive, so a single check is enough.
-    if token.is_active:
-        return False
+    # once is permanently inactive, so a single check at audit time is
+    # the binding answer.
     return not token.is_active
